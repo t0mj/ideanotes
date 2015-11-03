@@ -1,0 +1,27 @@
+<ion-view view-title="New Idea">
+  <ion-content class="padding">
+
+    <div class="list card">
+      <div class="item item-divider">{{ newNote.name }}</div>
+      <div class="item item-body">
+        <div ng-app="myApp">
+          <form name="saveTemplateData" ng-submit="createNote()">
+            Idea Name <br /><input type="text" ng-model="newNote.name" /><br />
+            Type <br />
+            <select ng-model="newNote.type">
+              <option value="app">Application</option>
+              <option value="plan">Business Plan</option>
+              <option value="marketing">Marketing</option>
+              <option value="invention">Invention</option>
+            </select><br />
+            Target Audience <br /><input type="text" ng-model="newNote.audience" /><br />
+            Description <br /><textarea ng-model="newNote.description"></textarea><br />
+            Attachment <br /><input type="file" ng-model="newNote.drawing" id="file_profile" /><br />
+            <button type="submit" ng-click="Submit">Store Idea</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
